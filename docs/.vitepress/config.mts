@@ -7,7 +7,6 @@ export default defineConfig({
   base: '/FAFU-Cybersecurity-Guide/',
   appearance: 'dark',
   lastUpdated: true,
-  cleanUrls: true,
 
   themeConfig: {
     siteTitle: 'FAFU 网安指南',

@@ -1,0 +1,128 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  lang: 'zh-CN',
+  title: '福建农林大学网络空间安全专业指南',
+  description: '开源网络安全学校：课程地图、四年规划与自学资源',
+  base: '/FAFU-Cybersecurity-Guide/',
+  appearance: 'dark',
+  lastUpdated: true,
+  cleanUrls: true,
+
+  themeConfig: {
+    siteTitle: 'FAFU 网安指南',
+    nav: [
+      { text: '前言', link: '/前言' },
+      { text: '课程地图', link: '/课程地图' },
+      { text: '学习规划', link: '/学习规划' },
+      { text: '必学工具', link: '/必学工具/Linux' },
+      { text: '安全方向', link: '/安全方向/网络空间安全导论' },
+      { text: '竞赛成长', link: '/竞赛与成长/CTF与竞赛' },
+      { text: '贡献指南', link: '/贡献指南' },
+    ],
+    sidebar: [
+      {
+        text: '入门',
+        items: [
+          { text: '前言', link: '/前言' },
+          { text: '如何使用这本指南', link: '/使用指南' },
+          { text: '专业与课程地图', link: '/课程地图' },
+          { text: '四年学习规划', link: '/学习规划' },
+          { text: '好书推荐', link: '/好书推荐' },
+          { text: '贡献指南', link: '/贡献指南' },
+          { text: '后记', link: '/后记' },
+        ],
+      },
+      {
+        text: '🧰 必学工具',
+        collapsed: false,
+        items: [
+          { text: 'Linux 与命令行', link: '/必学工具/Linux' },
+          { text: 'Git 与 GitHub', link: '/必学工具/Git与GitHub' },
+          { text: 'Vim', link: '/必学工具/Vim' },
+          { text: 'Docker', link: '/必学工具/Docker' },
+          { text: '虚拟机与 Kali', link: '/必学工具/虚拟机与Kali' },
+          { text: '抓包与流量分析', link: '/必学工具/抓包与流量分析' },
+          { text: 'Burp Suite 与 Web 调试', link: '/必学工具/BurpSuite与Web调试' },
+          { text: '逆向工具链', link: '/必学工具/逆向工具链' },
+          { text: 'CTF 平台与资源', link: '/必学工具/CTF平台与资源' },
+        ],
+      },
+      {
+        text: '📐 专业基础',
+        collapsed: false,
+        items: [
+          { text: '数学基础', link: '/专业基础/数学基础' },
+          { text: '程序设计基础', link: '/专业基础/程序设计基础' },
+          { text: '数据结构与算法', link: '/专业基础/数据结构与算法' },
+          { text: '计算机组成与系统结构', link: '/专业基础/计算机组成与系统结构' },
+          { text: '操作系统', link: '/专业基础/操作系统' },
+          { text: '计算机网络', link: '/专业基础/计算机网络' },
+          { text: '数据库', link: '/专业基础/数据库' },
+          { text: '汇编语言', link: '/专业基础/汇编语言' },
+        ],
+      },
+      {
+        text: '🛡️ 安全方向',
+        collapsed: false,
+        items: [
+          { text: '网络空间安全导论', link: '/安全方向/网络空间安全导论' },
+          { text: '密码学', link: '/安全方向/密码学' },
+          { text: '安全协议分析', link: '/安全方向/安全协议分析' },
+          { text: '网络攻防', link: '/安全方向/网络攻防' },
+          { text: 'Web 安全', link: '/安全方向/Web安全' },
+          { text: '二进制安全与逆向', link: '/安全方向/二进制安全与逆向' },
+          { text: '操作系统安全', link: '/安全方向/操作系统安全' },
+          { text: '数据库安全与隐私保护', link: '/安全方向/数据库与隐私保护' },
+          { text: '恶意代码分析', link: '/安全方向/恶意代码分析' },
+          { text: '数字取证与舆情安全', link: '/安全方向/数字取证' },
+          { text: '物联网与云安全', link: '/安全方向/物联网与云安全' },
+          { text: '人工智能安全', link: '/安全方向/人工智能安全' },
+          { text: '法律伦理与合规', link: '/安全方向/法律伦理与合规' },
+        ],
+      },
+      {
+        text: '🧪 实验与实践',
+        collapsed: false,
+        items: [
+          { text: '课程设计与实训', link: '/实验与实践/课程设计与实训' },
+          { text: '安全实验平台', link: '/实验与实践/安全实验平台' },
+        ],
+      },
+      {
+        text: '🏆 竞赛与成长',
+        collapsed: false,
+        items: [
+          { text: 'CTF 与学科竞赛', link: '/竞赛与成长/CTF与竞赛' },
+          { text: '考研与深造', link: '/竞赛与成长/考研与深造' },
+          { text: '就业与认证', link: '/竞赛与成长/就业与认证' },
+        ],
+      },
+    ],
+    outline: { level: [2, 3], label: '本页内容' },
+    docFooter: { prev: '上一篇', next: '下一篇' },
+    lastUpdated: { text: '最后更新' },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/OpenFAFU/FAFU-Cybersecurity-Guide' }],
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+          modal: {
+            displayDetails: '显示详情',
+            resetButtonTitle: '清除',
+            backButtonTitle: '返回',
+            noResultsText: '没有找到相关结果',
+            footer: { selectText: '选择', navigateText: '切换', closeText: '关闭' },
+          },
+        },
+      },
+    },
+    footer: { message: 'MIT License · 开源网络安全学校', copyright: '© 2026 OpenFAFU' },
+    returnToTopLabel: '回到顶部',
+    sidebarMenuLabel: '菜单',
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
+  },
+})
